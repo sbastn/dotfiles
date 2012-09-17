@@ -1,4 +1,4 @@
 Sebastian's very own dotfiles
 ========
 
-Storing my vimrc as a start
+Storing my vim config as a start
