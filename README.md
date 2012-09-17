@@ -1,4 +1,4 @@
-dotfiles
+Sebastian's very own dotfiles
 ========
 
-my dotfiles
+Storing my vimrc as a start
