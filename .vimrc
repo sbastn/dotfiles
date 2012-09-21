@@ -43,7 +43,9 @@ Bundle 'https://github.com/vim-scripts/AutoComplPop'
 Bundle 'https://github.com/scrooloose/syntastic'
 Bundle 'https://github.com/Lokaltog/vim-powerline'
 Bundle 'https://github.com/sbastn/Tomorrow-Theme'
+Bundle 'https://github.com/tpope/vim-surround'
 Bundle "git://github.com/kien/ctrlp.vim.git"
+
 " snipMate
 Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
 Bundle "git://github.com/tomtom/tlib_vim.git"
