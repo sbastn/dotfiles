@@ -3,6 +3,7 @@ syntax enable
 set encoding=utf-8
 set showcmd
 filetype plugin indent on
+set nobackup
 
 " launch ruby from vim
 set shell=/bin/sh
@@ -30,21 +31,17 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-rails.git'
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'https://github.com/vim-scripts/ack.vim'
-Bundle 'https://github.com/claco/jasmine.vim'
 Bundle 'https://github.com/statianzo/vim-jade'
-Bundle 'https://github.com/wavded/vim-stylus'
 Bundle 'https://github.com/pangloss/vim-javascript'
-Bundle 'https://github.com/vim-scripts/VimClojure'
 Bundle 'https://github.com/spolu/dwm.vim'
 Bundle 'https://github.com/vim-scripts/AutoComplPop'
-Bundle 'https://github.com/scrooloose/syntastic'
+" Bundle 'https://github.com/scrooloose/syntastic'
 Bundle 'https://github.com/Lokaltog/vim-powerline'
 Bundle 'https://github.com/sbastn/Tomorrow-Theme'
 Bundle 'https://github.com/tpope/vim-surround'
 Bundle "git://github.com/kien/ctrlp.vim.git"
+Bundle "https://github.com/epmatsw/ag.vim"
 
 " snipMate
 Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
@@ -85,13 +82,13 @@ imap jj <Esc>
 " ctrlp options
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 2
-set wildignore+=*.o,*.obj,.git,*.swp,tmp                                                                                                                      
+set wildignore+=*.o,*.obj,.git,*.swp,tmp
 let g:ctrlp_custom_ignore = '\.git$\|\.svn$|\.swp$|\.o$'
 
 " set the theme
 set t_Co=256
 set background=light
-colorscheme tomorrow
+colorscheme Tomorrow
 
 " set the font
 set gfn=Panic\ Sans:h14
@@ -100,3 +97,15 @@ set gfn=Panic\ Sans:h14
 let g:Powerline_symbols = 'fancy'
 " set fillchars+=stl:\ ,stlnc:\
 set laststatus=2
+
+" whitespace
+:highlight ExtraWhitespace ctermbg=red guibg=red
+:match ExtraWhitespace /\s\+$/
+
+" mappings from jacegu
+" indent
+map <leader>I  gg=G<cr>
+" remove trailing whitespaces
+map <leader>T  :%s/\s\s*$//g<cr>
+" run as ruby file
+map <leader><cr> :!ruby %<cr>
