@@ -84,6 +84,8 @@ let g:ctrlp_map = '<leader>t'
 let g:ctrlp_working_path_mode = 2
 set wildignore+=*.o,*.obj,.git,*.swp,tmp
 let g:ctrlp_custom_ignore = '\.git$\|\.svn$|\.swp$|\.o$'
+"" Opens the recent buffers
+map <leader>b :CtrlPBuffer<cr>
 
 " set the theme
 set t_Co=256
