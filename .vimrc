@@ -111,3 +111,5 @@ map <leader>I  gg=G<cr>
 map <leader>T  :%s/\s\s*$//g<cr>
 " run as ruby file
 map <leader><cr> :!ruby %<cr>
+" remove highlights
+map <leader><space> :noh<cr>
