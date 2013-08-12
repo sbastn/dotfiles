@@ -36,13 +36,15 @@ Bundle 'https://github.com/statianzo/vim-jade'
 Bundle 'https://github.com/pangloss/vim-javascript'
 Bundle 'https://github.com/spolu/dwm.vim'
 Bundle 'https://github.com/vim-scripts/AutoComplPop'
-" Bundle 'https://github.com/scrooloose/syntastic'
-Bundle 'https://github.com/Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'https://github.com/sbastn/Tomorrow-Theme'
 Bundle 'https://github.com/tpope/vim-surround'
 Bundle "git://github.com/kien/ctrlp.vim.git"
 Bundle "https://github.com/epmatsw/ag.vim"
-
+Bundle 'lunaru/vim-less'
+Bundle 'mattn/emmet-vim'
+Bundle 'sbastn/vim-writeroom'
+"
 " snipMate
 Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
 Bundle "git://github.com/tomtom/tlib_vim.git"
@@ -69,6 +71,7 @@ set showtabline=2
 autocmd BufEnter *.coffee set filetype=coffee
 autocmd BufEnter *.ejs set filetype=html
 autocmd BufEnter *.jade set filetype=jade
+autocmd BufEnter *.less set filetype=less
 
 " Remove the scroll bars
 set guioptions-=m " remove menu bar
@@ -95,10 +98,12 @@ colorscheme Tomorrow
 " set the font
 set gfn=Panic\ Sans:h14
 
-" vim-powerline
-let g:Powerline_symbols = 'fancy'
+" airline/powerline
+"let g:Powerline_symbols = 'fancy'
+"let g:airline_powerline_fonts=0
 " set fillchars+=stl:\ ,stlnc:\
 set laststatus=2
+let g:airline_theme='light'
 
 " whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
@@ -113,3 +118,5 @@ map <leader>T  :%s/\s\s*$//g<cr>
 map <leader><cr> :!ruby %<cr>
 " remove highlights
 map <leader><space> :noh<cr>
+" writeroom mode only in macvim
+nnoremap <F5> :call VimWriteRoom()<CR>
