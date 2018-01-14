@@ -112,3 +112,7 @@ map <leader>S :setlocal spell spelllang=es<cr>
 " stuff needed for the coffescript plugin to work
 syntax enable
 filetype plugin indent on
+
+" Persistent undo
+set undodir=$HOME/.vim/undo
+set undofile
